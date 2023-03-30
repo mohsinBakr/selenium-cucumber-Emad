@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 public class NopCom_LandingPage {
     private final WebDriver webDriver;
+
     public NopCom_LandingPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(new AjaxElementLocatorFactory(webDriver, 15), this);

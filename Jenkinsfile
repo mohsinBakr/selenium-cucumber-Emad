@@ -1,25 +1,14 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'FEATURE_FILES', defaultValue: 'NopCom_SearchForProduct.feature', description: 'Comma-separated list of feature files to run')
+        string(name: 'CUCUMBER_TAGS', defaultValue: '', description: 'Enter Cucumber tags to run (e.g., @smoke).')
     }
     stages {
-        stage('Run Tests') {
+        stage('Run Cucumber Tests') {
             steps {
                 script {
-                    // Define the base path for the feature files
-                    def basePath = 'src/test/resources/features/'
-
-                    // Construct the full paths for each specified feature file
-                    def featuresList = FEATURE_FILES.split(',').collect { filename ->
-                        "${basePath}${filename.trim()}"
-                    }.join(' ')
-
-                    // Log the constructed feature paths for debugging
-                    echo "Running features: ${featuresList}"
-
-                    // Run the Cucumber tests with the specified feature files
-                    sh "mvn clean test -Dcucumber.options='${featuresList}'"
+                    def tags = params.CUCUMBER_TAGS ?: "@smoke" // Set default if none provided
+                    sh "mvn test -Dcucumber.filter.tags=\"${CUCUMBER_TAGS}\""
                 }
             }
         }

@@ -40,6 +40,7 @@ public class AllDriverManager {
             case FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
+//                firefoxOptions.setBinary("/Applications/Firefox.app/Contents/MacOS/firefox");
                 if (Objects.equals(isHeadless, "Yes")) {
                     firefoxOptions.addArguments("--headless");
                 }

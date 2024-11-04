@@ -6,8 +6,10 @@ import Utilities.Wait;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 public class NopCom_LandingSteps {
+    public static WebDriver webDriver;
     NopCom_LandingPage nopComLandingPage;
     TestContext testContext;
 

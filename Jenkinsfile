@@ -15,6 +15,9 @@ pipeline {
                         "${basePath}${filename.trim()}"
                     }.join(' ')
 
+                    // Log the constructed feature paths for debugging
+                    echo "Running features: ${featuresList}"
+
                     // Run the Cucumber tests with the specified feature files
                     sh "mvn clean test -Dcucumber.options='${featuresList}'"
                 }

@@ -8,10 +8,7 @@ pipeline {
             steps {
                 script {
                     def tags = params.CUCUMBER_TAGS ?: "@smoke"
-                    sh """
-                        #!/bin/bash
                         mvn test -Dcucumber.filter.tags='${tags}'
-                    """
                 }
             }
         }

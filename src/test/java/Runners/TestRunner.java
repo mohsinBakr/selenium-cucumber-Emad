@@ -8,21 +8,27 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "src/test/resources/features", // default path
         glue = "StepDefinitions",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/Report.html",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "timeline:target/test-output-thread/"
-    }
+        }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
+    // Add the setup for a dynamic feature path
     @BeforeClass
     public void setUp() {
+        // Set the feature file dynamically, if specified
+        String featurePath = System.getProperty("cucumber.feature", "src/test/resources/features");
+        System.setProperty("cucumber.options", featurePath);
+
         String tags = System.getProperty("cucumber.tags", "@smoke"); // default to @smoke if not set
         System.setProperty("cucumber.filter.tags", tags);
     }
+
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {

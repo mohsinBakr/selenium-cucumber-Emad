@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     def tags = params.CUCUMBER_TAGS ?: "@smoke" // Set default if none provided
-                    sh "/bin/bash -c 'mvn test -Dcucumber.filter.tags=\"${tags}\"'"
+                    sh "mvn test -Dcucumber.filter.tags='${tags}'"
                 }
             }
         }

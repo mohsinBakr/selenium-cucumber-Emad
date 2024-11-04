@@ -12,9 +12,9 @@ import org.testng.annotations.DataProvider;
         glue = "StepDefinitions",
         plugin = {
                 "pretty",
-                "html:target/cucumber-reports/Report.html",
-                "json:target/cucumber-reports/CucumberTestReport.json",
-                "timeline:target/test-output-thread/"
+                "html:src/test/resources/Reports/Report.html",
+                "json:src/test/resources/Reports/CucumberTestReport.json",
+                "timeline:src/test/resources/Reports/test-output-thread/"
         }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {

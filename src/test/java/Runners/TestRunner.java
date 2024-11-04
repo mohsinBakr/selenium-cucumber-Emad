@@ -7,14 +7,13 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = "src/test/resources/features",
         glue = "StepDefinitions",
         plugin = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
                 "json:target/cucumber-reports/CucumberTestReport.json",
                 "timeline:target/test-output-thread/"
-    }
+        }
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 

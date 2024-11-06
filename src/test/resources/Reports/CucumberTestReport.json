@@ -1,0 +1,113 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2024-11-06T21:55:25.751Z",
+        "before": [
+          {
+            "result": {
+              "duration": 9080895000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Go to landing page and search for \"Nokia\" then assert that the result is: \"Nokia Lumia 1020\"",
+        "description": "",
+        "id": "search-for-product;go-to-landing-page-and-search-for-\"\u003cproduct\u003e\"-then-assert-that-the-result-is:-\"\u003cexpected\u003e\";;2",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Mohsens-MacBook-Air.local\u0027, ip: \u0027fe80:0:0:0:8c9:3558:7a2c:28a%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027aarch64\u0027, os.version: \u002715.1\u0027, java.version: \u002721.0.5\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 130.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240913135723, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 24.1.0, moz:processID: 24589, moz:profile: /var/folders/wx/k142_0mn6n3..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}\nSession ID: b6ade675-ab26-4f4d-a2a4-1d71824b0893\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\n\tat org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)\n\tat Managers.AllDriverManager.closeDriver(AllDriverManager.java:88)\n\tat StepDefinitions.Hooks.tearDown(Hooks.java:40)\n",
+              "duration": 20703000,
+              "status": "failed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: TypeError: browsingContext.currentWindowGlobal is null\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Mohsens-MacBook-Air.local\u0027, ip: \u0027fe80:0:0:0:8c9:3558:7a2c:28a%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027aarch64\u0027, os.version: \u002715.1\u0027, java.version: \u002721.0.5\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 130.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240913135723, moz:geckodriverVersion: 0.35.0, moz:headless: false, moz:platformVersion: 24.1.0, moz:processID: 24589, moz:profile: /var/folders/wx/k142_0mn6n3..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Macintosh; Int...}\nSession ID: b6ade675-ab26-4f4d-a2a4-1d71824b0893\n*** Element info: {Using\u003did, value\u003dsmall-searchterms}\n\tat java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)\n\tat org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:51)\n\tat org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)\n\tat PageObjects.NopCom_LandingPage.LandingPageIsDisplayed(NopCom_LandingPage.java:23)\n\tat StepDefinitions.NopCom_LandingSteps.HomePageIsDisplayed(NopCom_LandingSteps.java:26)\n\tat ✽.Verify that home page is displayed(file:///Users/mohsenbakr/Documents/GitHub/selenium-cucumber-Emad/src/test/resources/features/NopCom_SearchForProduct.feature:6)\n",
+              "duration": 1274953000,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "Verify that home page is displayed",
+            "match": {
+              "location": "StepDefinitions.NopCom_LandingSteps.HomePageIsDisplayed()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 195000,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "search for \"Nokia\" in the search field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nokia\"",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefinitions.NopCom_LandingSteps.SearchInTheStore(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 249000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "Click Search Button",
+            "match": {
+              "location": "StepDefinitions.NopCom_LandingSteps.ClickSearchButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 141000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "I should find \"Nokia Lumia 1020\" in the results",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nokia Lumia 1020\"",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefinitions.NopCom_SearchResultsSteps.iShouldFindInTheResults(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@NopCom_SearchForProduct"
+          }
+        ]
+      }
+    ],
+    "name": "Search for product",
+    "description": "  As a customer I want to go to the online store and search for nokia",
+    "id": "search-for-product",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/NopCom_SearchForProduct.feature",
+    "tags": []
+  }
+]

@@ -10,3 +10,14 @@ Feature: Search for product
     Examples:
       | product | Expected                                    |
       | Nokia   | Nokia Lumia 1020                            |
+
+
+  @SearchForProduct
+  Scenario Outline: Go to landing page and search for "<product>" then assert that the result is: "<Expected>"
+    Given Verify that home page is displayed
+    When search for "<product>" in the search field
+    And Click Search Button
+    Then I should find "<Expected>" in the results
+    Examples:
+      | product | Expected                                    |
+      | Windows   | Surface                            |

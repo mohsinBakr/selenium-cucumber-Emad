@@ -7,7 +7,7 @@ public class PageObjectManager {
 
     private final WebDriver webDriver;
 
-    private NopCom_LandingPage nopComLandingPage;
+    private SWICA_LandingPage nopComLandingPage;
 
     private NopCom_SearchResultsPage nopComSearchResultsPage;
 
@@ -17,8 +17,8 @@ public class PageObjectManager {
 
     //Short Hand If...Else
 
-    public NopCom_LandingPage getLandingPage() {
-        return (nopComLandingPage == null) ? nopComLandingPage = new NopCom_LandingPage(webDriver) : nopComLandingPage;
+    public SWICA_LandingPage getLandingPage() {
+        return (nopComLandingPage == null) ? nopComLandingPage = new SWICA_LandingPage(webDriver) : nopComLandingPage;
     }
     public NopCom_SearchResultsPage getSearchResultsPage() {
         return (nopComSearchResultsPage == null) ? nopComSearchResultsPage = new NopCom_SearchResultsPage(webDriver) : nopComSearchResultsPage;

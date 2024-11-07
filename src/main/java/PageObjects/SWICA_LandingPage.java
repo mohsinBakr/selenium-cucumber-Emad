@@ -5,31 +5,28 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-public class NopCom_LandingPage {
+public class SWICA_LandingPage {
     private final WebDriver webDriver;
 
-    public NopCom_LandingPage(WebDriver webDriver) {
+    public SWICA_LandingPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(new AjaxElementLocatorFactory(webDriver, 15), this);
     }
 
-    @FindBy(id = "small-searchterms")
-    private WebElement searchField;
+    @FindBy(id = "onetrust-policy-title")
+    private WebElement CookiesWelcomeMessage;
 
-    @FindBy(xpath ="//button[@type='submit']")
-    private WebElement searchButton;
+    @FindBy(id ="onetrust-accept-btn-handler1")
+    private WebElement AcceptCookies;
 
     public boolean LandingPageIsDisplayed() {
-        searchField.isDisplayed();
-        searchButton.isDisplayed();
+        CookiesWelcomeMessage.isDisplayed();
+        AcceptCookies.isDisplayed();
         return true;
     }
 
-    public void FillSearchField(String SearchFor){
-        searchField.sendKeys(SearchFor);
+    public void UserAcceptCookies(){
+        AcceptCookies.click();
     }
 
-    public void ClickSearch(){
-        searchButton.click();
-    }
 }

@@ -41,7 +41,7 @@ public class AllDriverManager {
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
 //                firefoxOptions.setBinary("/usr/bin/firefox"); //Jenkins
-                firefoxOptions.setBinary("/Applications/Firefox.app/Contents/MacOS/firefox"); //Local
+//                firefoxOptions.setBinary("/Applications/Firefox.app/Contents/MacOS/firefox"); //Local
                 if (Objects.equals(isHeadless, "Yes")) {
                     firefoxOptions.addArguments("--headless");
                 }

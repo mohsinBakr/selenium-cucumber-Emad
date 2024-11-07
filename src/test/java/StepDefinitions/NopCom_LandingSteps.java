@@ -1,6 +1,6 @@
 package StepDefinitions;
 
-import PageObjects.NopCom_LandingPage;
+import PageObjects.SWICA_LandingPage;
 import Utilities.TestContext;
 import Utilities.Wait;
 import io.cucumber.java.en.And;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 public class NopCom_LandingSteps {
     public static WebDriver webDriver;
-    NopCom_LandingPage nopComLandingPage;
+    SWICA_LandingPage SWICALandingPage;
     TestContext testContext;
 
     Wait wait;
@@ -18,23 +18,16 @@ public class NopCom_LandingSteps {
 
     public NopCom_LandingSteps(TestContext context) {
         testContext = context;
-        nopComLandingPage = testContext.getPageObjectManager().getLandingPage();
+        SWICALandingPage = testContext.getPageObjectManager().getLandingPage();
     }
 
     @Given("Verify that home page is displayed")
     public void HomePageIsDisplayed() {
-        Assert.assertTrue(nopComLandingPage.LandingPageIsDisplayed());
+        Assert.assertTrue(SWICALandingPage.LandingPageIsDisplayed());
     }
 
-    @When("search for {string} in the search field")
-    public void SearchInTheStore(String SearchValue){
-        nopComLandingPage.FillSearchField(SearchValue);
+    @When("Click Accept Cookies")
+    public void clickAcceptCookies() {
+        SWICALandingPage.UserAcceptCookies();
     }
-
-    @And("Click Search Button")
-    public void ClickSearchButton(){
-        nopComLandingPage.ClickSearch();
-    }
-
-
 }

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import javax.naming.directory.SearchResult;
+import java.time.Duration;
 
 public class NopCom_SearchResultsPage {
     private final WebDriver webDriver;
@@ -24,7 +25,7 @@ public class NopCom_SearchResultsPage {
     private WebElement SearchResults;
 
     public String GetSearchResultString(){
-        Wait.untilElementIsVisible(webDriver, SearchResults, 10L);
+        Wait.untilElementIsVisible(webDriver, SearchResults, Duration.ofSeconds(10));
         return SearchResults.getText();
     }
 
@@ -33,7 +34,7 @@ public class NopCom_SearchResultsPage {
     }
 
     public String GetSearchResultString2(){
-        Wait.untilElementIsVisible(webDriver, SearchResult(), 10L);
+        Wait.untilElementIsVisible(webDriver, SearchResult(), Duration.ofSeconds(10));
         ((JavascriptExecutor) webDriver).executeScript("arguments[0].scrollIntoView(true);", SearchResult());
         return SearchResult().getText();
     }
